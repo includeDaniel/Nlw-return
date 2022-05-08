@@ -1,8 +1,10 @@
-export interface SendMailData {
+interface SendMailData {
   subject: string;
   body: string;
 }
 
-export interface MailAdapter {
+interface MailAdapter {
   sendMail: (data: SendMailData) => Promise<void>;
 }
+
+export type { SendMailData, MailAdapter };
